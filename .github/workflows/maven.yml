@@ -29,7 +29,18 @@ jobs:
     - name: Buscar jar
       run: |
         ls -al target/*.jar
+   
     
+    - name: sonarqube
+      run: |
+        echo "Run SonarQube analysis manually..."
+        mvn clean verify sonar:sonar \
+            -Dsonar.projectKey=ms-agosto-01 \
+            -Dsonar.projectName=ms-agosto-01 \
+            -Dsonar.host.url=http://localhost:9001 \
+            -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+
+
     - name: build image
       run: |
         echo "Building Docker image..."
