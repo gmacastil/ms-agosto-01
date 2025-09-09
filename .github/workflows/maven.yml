@@ -3,9 +3,13 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "dev", "feature/*" ]
   pull_request:
     branches: [ "main" ]
+
+env:
+  REGISTRY: mauron
+  SONAR_HOST_URL: http://localhost:9001
 
 jobs:
   ci:
@@ -35,17 +39,17 @@ jobs:
       run: |
         echo "Run SonarQube analysis manually..."
         mvn clean verify sonar:sonar \
-            -Dsonar.projectKey=ms-agosto-01 \
-            -Dsonar.projectName=ms-agosto-01 \
-            -Dsonar.host.url=http://localhost:9001 \
+            -Dsonar.projectKey=${{ github.event.repository.name }} \
+            -Dsonar.projectName=${{ github.event.repository.name }} \
+            -Dsonar.host.url=${{ env.SONAR_HOST_URL }} \
             -Dsonar.token=${{ secrets.SONAR_TOKEN }}
 
 
     - name: build image
       run: |
         echo "Building Docker image..."
-        docker build -t mauron/ms-agosto-01:${{ github.run_number}} .
-    
+        docker build -t ${{ env.REGISTRY }}/${{ github.event.repository.name }}:${{ github.run_number}} .
+
     - name: login docker
       run: |
         echo "Logging in to Docker..."
@@ -54,4 +58,16 @@ jobs:
     - name: Push Docker image
       run: |
         echo "Pushing Docker image..."
-        docker push mauron/ms-agosto-01:${{ github.run_number}}
+        docker push ${{ env.REGISTRY }}/${{ github.event.repository.name }}:${{ github.run_number}}
+  
+  notificar:
+
+    #runs-on: ubuntu-latest
+    runs-on: profe
+
+    steps:
+
+      - name: Notificar
+        if: always()
+        run: |
+          echo "Paralelo al job anterior"
