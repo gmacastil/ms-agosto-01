@@ -3,7 +3,7 @@ package com.lite.ms_agosto_01;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-//import com.lite.libreria.ClaseBean;
+import com.lite.libreria.ClaseBean;
 
 @RestController
 public class AgostoController {
@@ -13,7 +13,7 @@ public class AgostoController {
 
     @GetMapping("/")
     public String getAgosto() {
-        //ClaseBean bean = new ClaseBean();
-        return "Agosto 01";
+        ClaseBean bean = new ClaseBean();
+        return bean.saludar();
     }
 }

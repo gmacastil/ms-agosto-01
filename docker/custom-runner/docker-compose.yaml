@@ -1,0 +1,16 @@
+services:
+  github-runner:
+    image: custom:v1
+    container_name: github-runner
+    restart: always
+    environment:
+
+      REPO_URL: https://github.com/gmacastil/ms-agosto-01
+
+      RUNNER_TOKEN: AI4WDQMHT2NCLENQTXG5IQLIX6LEG
+      RUNNER_NAME: docker-runner
+      RUNNER_WORKDIR: /tmp/github-runner
+      RUNNER_LABELS: linux,docker,profe
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./runner-data:/runner

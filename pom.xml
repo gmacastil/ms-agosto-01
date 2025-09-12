@@ -45,7 +45,7 @@
 		<dependency>
 			<groupId>com.lite</groupId>
 			<artifactId>libreria</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.3-SNAPSHOT</version>
 		</dependency>
 
 

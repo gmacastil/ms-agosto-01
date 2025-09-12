@@ -9,7 +9,7 @@ on:
 
 env:
   REGISTRY: mauron
-  SONAR_HOST_URL: http://localhost:9001
+  SONAR_HOST_URL: http://localhost:900
 
 jobs:
   ci:
@@ -60,10 +60,12 @@ jobs:
         echo "Pushing Docker image..."
         docker push ${{ env.REGISTRY }}/${{ github.event.repository.name }}:${{ github.run_number}}
   
-  notificar:
+  cd:
 
     #runs-on: ubuntu-latest
     runs-on: profe
+
+    needs: ci
 
     steps:
 
