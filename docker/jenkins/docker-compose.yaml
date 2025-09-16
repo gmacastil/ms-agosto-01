@@ -1,22 +1,59 @@
-    services:
-      jenkins:
-        container_name: jenkins
-        image: jenkins/jenkins:lts
-        privileged: true
-        ports:
-          - "5080:8080"
-          - "50000:50000"
-        volumes:
-          - jenkins_home:/var/jenkins_home
-        environment:
-          - JAVA_OPTS=-Djenkins.install.runSetupWizard=true
-          - TZ=America/Bogota
-        networks:
-          - devops
+services:
+  jenkins:
+      container_name: jenkins
+      image: jenkins/jenkins:lts
+      privileged: true
+      ports:
+        - "5080:8080"
+        - "50000:50000"
+      volumes:
+        - jenkins_home:/var/jenkins_home
+      environment:
+        - JAVA_OPTS=-Djenkins.install.runSetupWizard=true
+        - TZ=America/Bogota
+      networks:
+        - devops
 
-    volumes:
-      jenkins_home:
-    
-    networks:
-      devops:
-        external: true
+  slave:
+      image: jenkins/agent:latest
+      container_name: slave
+      user: "0"
+      init: true
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+        - slave_home:/home/jenkins/agent
+      command: >
+        java -jar /usr/share/jenkins/agent.jar
+        -workDir /home/jenkins/agent
+        -jnlpUrl http://jenkins:8080/computer/slave/jenkins-agent.jnlp
+        -secret 9019ea2ca2a2c4588dbdda70a5a05836792033bfdc35cbae8d674bd7dd689b7f
+      networks:
+        - devops
+  
+  slave2:
+      image: jenkins/agent:latest
+      container_name: slave2
+      user: "0"
+      init: true
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+        - slave_home2:/home/jenkins/agent
+      command: >
+        java -jar /usr/share/jenkins/agent.jar
+        -workDir /home/jenkins/agent
+        -jnlpUrl http://jenkins:8080/computer/slave/jenkins-agent.jnlp
+        -secret 9fe7105e01ce0af94c79a2de5bdf7634cfe77b0f44be7499133b6cc0e0807336
+      networks:
+        - devops
+
+
+volumes:
+  jenkins_home:
+  slave_home:
+  slave_home2:
+
+networks:
+  devops:
+   external: true

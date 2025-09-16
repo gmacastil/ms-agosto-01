@@ -60,3 +60,12 @@ mvn clean verify sonar:sonar \
   -Dsonar.projectName=ms-agosto-01 \
   -Dsonar.host.url=http://localhost:9001 \
   -Dsonar.token=squ_7665578e41538f3b3a7438ee18500f39b107c8e8
+
+
+
+# jenkins
+
+
+cd docker/jenkins
+docker compose up -d
+
