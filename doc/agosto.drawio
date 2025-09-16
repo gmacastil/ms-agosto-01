@@ -3177,9 +3177,6 @@
         <mxCell id="i6h47OwyrnfOpenF_XPq-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.361;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="i6h47OwyrnfOpenF_XPq-97" target="i6h47OwyrnfOpenF_XPq-92" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YLWx-YwlUostLW4V4A2a-1" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;http://localhost:5080&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="500" y="752.5" width="120" height="30" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -3358,6 +3355,30 @@
         </mxCell>
         <mxCell id="_KX1wr1VVp0PXEd4Y4I8-55" value="cront" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="220" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DBHWJjTrhf-fhoEjebWu-1" value="Jenkins" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="70" y="1610" width="170" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="DBHWJjTrhf-fhoEjebWu-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DBHWJjTrhf-fhoEjebWu-2" target="DBHWJjTrhf-fhoEjebWu-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DBHWJjTrhf-fhoEjebWu-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DBHWJjTrhf-fhoEjebWu-2" target="DBHWJjTrhf-fhoEjebWu-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DBHWJjTrhf-fhoEjebWu-2" value="&lt;b&gt;Pipeline&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- tools&lt;/div&gt;&lt;div&gt;- credecials&lt;/div&gt;&lt;div&gt;- pluggin&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1640" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="DBHWJjTrhf-fhoEjebWu-3" value="&lt;div&gt;System -&amp;gt; pluggins&lt;/div&gt;&lt;div&gt;&amp;lt;data&amp;gt; -&amp;gt; ID&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="95" y="1640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DBHWJjTrhf-fhoEjebWu-4" value="&lt;div&gt;Tools&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="95" y="1710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DBHWJjTrhf-fhoEjebWu-5" value="Credencials" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="95" y="1780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DBHWJjTrhf-fhoEjebWu-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.964;entryY=0.449;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DBHWJjTrhf-fhoEjebWu-2" target="DBHWJjTrhf-fhoEjebWu-4">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
