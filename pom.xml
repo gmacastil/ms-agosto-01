@@ -42,12 +42,13 @@
 			<scope>test</scope>
 		</dependency>
 		
+		<!--
 		<dependency>
 			<groupId>com.lite</groupId>
 			<artifactId>libreria</artifactId>
 			<version>0.0.3-SNAPSHOT</version>
 		</dependency>
-
+       -->
 
 	</dependencies>
 
