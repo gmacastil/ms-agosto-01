@@ -18,10 +18,13 @@ services:
       image: jenkins/agent:latest
       container_name: slave
       init: true
+      group_add:
+      - "986"
       volumes:
         - /var/run/docker.sock:/var/run/docker.sock
         - /usr/bin/docker:/usr/bin/docker
         - slave_home:/home/jenkins/agent
+        - /home/alecasti/.m2:/home/jenkins/.m2
       command: >
         java -jar /usr/share/jenkins/agent.jar -workDir /home/jenkins/agent -url http://jenkins:8080 -name slave -webSocket -workDir "/home/jenkins/agent" -secret 9019ea2ca2a2c4588dbdda70a5a05836792033bfdc35cbae8d674bd7dd689b7f
       networks:
