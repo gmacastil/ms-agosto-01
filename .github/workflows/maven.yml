@@ -67,7 +67,6 @@ jobs:
 
     steps:
 
-      - name: Notificar
-        if: always()
+      - name: validar
         run: |
-          echo "Paralelo al job anterior"
+          ls -al

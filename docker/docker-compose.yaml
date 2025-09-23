@@ -1,7 +1,7 @@
 services:
   ms-agosto-01-java:
     container_name: ms-agosto-01-java
-    image: mauron/ms-agosto-01:v3
+    image: mauron/ms-agosto-01:TAG
     ports:
       - "9090:8888"
     environment:
