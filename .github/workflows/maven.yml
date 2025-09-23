@@ -67,12 +67,22 @@ jobs:
 
     steps:
 
-      - name: CD Carpeta docker compose
+      - name: set tag
         run: |
           cd docker
           sed -i "s|TAG|${{ github.run_number }}|g" docker-compose.yaml
           cat docker-compose.yaml
       
+      - name: set environment variables
+        run: |
+          cd docker
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            sed -i "s|^\(MESSAGE=\).*|MESSAGE=${{ vars.URL_PRD }}|g" docker-compose.yaml
+          else
+            sed -i "s|^\(MESSAGE=\).*|MESSAGE=${{ vars.URL_DEV }}|g" docker-compose.yaml
+          fi
+          cat docker-compose.yaml
+
 
       - name: Run Docker Compose
         run: |
