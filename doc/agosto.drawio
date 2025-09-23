@@ -3751,7 +3751,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="aNCOM6i_GJgSx8gfMq76" name="Page-22">
-    <mxGraphModel dx="2380" dy="1175" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1703" dy="843" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3916,8 +3916,8 @@
         <mxCell id="4CNLKcwq0_4nlFvQpBJE-56" value="github" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=bottom;fillColor=#fad9d5;strokeColor=#ae4132;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="-447.5" y="1095" width="200" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="4CNLKcwq0_4nlFvQpBJE-57" value="Maquina Docker" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=bottom;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="37.5" y="1090" width="300" height="130" as="geometry" />
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-57" value="Maquina Docker" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=bottom;fontStyle=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="37.5" y="1090" width="532.5" height="160" as="geometry" />
         </mxCell>
         <mxCell id="4CNLKcwq0_4nlFvQpBJE-58" value="docker-compose.yaml" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-392.5" y="1125" width="100" height="40" as="geometry" />
@@ -3949,13 +3949,79 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4CNLKcwq0_4nlFvQpBJE-70" value="agente&lt;div&gt;github&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="1">
-          <mxGeometry x="57.5" y="1130" width="100" height="60" as="geometry" />
+          <mxGeometry x="57.5" y="1130" width="100" height="80" as="geometry" />
         </mxCell>
         <mxCell id="4CNLKcwq0_4nlFvQpBJE-71" value="dockerhub" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-390" y="930" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="4CNLKcwq0_4nlFvQpBJE-64" value="tag=1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="80" y="1110" width="45" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4CNLKcwq0_4nlFvQpBJE-74" target="4CNLKcwq0_4nlFvQpBJE-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-74" value="docker.compose.yaml&lt;div&gt;TAG=&lt;/div&gt;&lt;div&gt;ENV=&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-392.5" y="1520" width="182.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-75" value="pipeline&lt;div&gt;TAG=number&lt;/div&gt;&lt;div&gt;ENV=var.pipeline&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="1520" width="182.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-77" value="pipeline&lt;div&gt;if (branch)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-112.5" y="1610" width="182.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4CNLKcwq0_4nlFvQpBJE-78" target="4CNLKcwq0_4nlFvQpBJE-77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-78" value="docker-copose-dev.yaml&lt;div&gt;docker-copose-qa.yaml&lt;/div&gt;&lt;div&gt;docker-copose-prd.yaml&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-387.5" y="1620" width="182.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4CNLKcwq0_4nlFvQpBJE-82" target="4CNLKcwq0_4nlFvQpBJE-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-82" value="docker-copose.yaml&lt;div&gt;.env-dev&lt;/div&gt;&lt;div&gt;.env-qa&lt;/div&gt;&lt;div&gt;.evn-prd&lt;br&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-392.5" y="1710" width="182.5" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-83" value="pipeline&lt;div&gt;if (branch) --&amp;gt; env&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-102.5" y="1725" width="182.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-86" value="pwd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="1">
+          <mxGeometry x="-447.5" y="1660" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-87" value="pwd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1510" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-88" value="pwd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="1">
+          <mxGeometry x="-437.5" y="1740" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4CNLKcwq0_4nlFvQpBJE-90" target="4CNLKcwq0_4nlFvQpBJE-91">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-90" value="docker.compose.yaml&lt;div&gt;TAG=&lt;/div&gt;&lt;div&gt;ENV=&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-387.5" y="1840" width="182.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4CNLKcwq0_4nlFvQpBJE-91" target="4CNLKcwq0_4nlFvQpBJE-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-91" value="pipeline&lt;div&gt;&lt;br&gt;&lt;div&gt;TAG=number&lt;/div&gt;&lt;div&gt;ENV=var.pipeline&lt;/div&gt;&lt;/div&gt;&lt;div&gt;curl / wget / pluggin&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-102.5" y="1815" width="182.5" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-93" value="secret manager&lt;div&gt;SEC=&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-95" value="pwd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="1">
+          <mxGeometry x="295" y="1880" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-96" value="docker" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1200" width="460" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-97" value="jenkins" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1130" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-98" value="jenkins&lt;div&gt;slave&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1130" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4CNLKcwq0_4nlFvQpBJE-99" value="permsiso" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1180" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

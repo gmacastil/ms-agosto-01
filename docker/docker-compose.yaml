@@ -5,6 +5,9 @@ services:
     ports:
       - "9090:8888"
     environment:
-      - MESSAGE=hola microservicio java
+      - MESSAGE=
+      - URL=
+      - PASS=
       - TZ=Americas/Bogota
     restart: unless-stopped
+

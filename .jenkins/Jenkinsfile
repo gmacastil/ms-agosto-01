@@ -57,14 +57,32 @@ pipeline {
                 }
             }
         }
+ 
+        
+        stage('Deploy') {
+            steps {
+                script {
+                    // Set tag in docker-compose.yaml
+                    dir('docker') {
+                        def buildTag = env.BUILD_ID
+                        sh "sed -i 's|TAG|${buildTag}|g' docker-compose.yaml"
+                        sh "cat docker-compose.yaml"
+                        
+                        // Set environment variables in docker-compose.yaml
+                        def message = (env.BRANCH_NAME == 'main') ? env.URL_PRD : env.URL_DEV
+                        sh "sed -i 's|\\(MESSAGE=\\).*|MESSAGE=${message}|g' docker-compose.yaml"
+                        sh "cat docker-compose.yaml"
+                        
+                        // Run Docker Compose
+                        sh "docker compose up -d"
+                    }
+                }
+            }
+        }
 
         stage('Limpiar Workspace') {
             steps {
                 cleanWs()
             }
         }
-        
-        
-
-    }
 }
