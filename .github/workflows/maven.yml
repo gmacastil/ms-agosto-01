@@ -76,5 +76,5 @@ jobs:
 
       - name: Run Docker Compose
         run: |
-          ls -al
+          cd docker
           docker compose up -d
