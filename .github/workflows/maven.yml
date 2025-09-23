@@ -9,7 +9,7 @@ on:
 
 env:
   REGISTRY: mauron
-  SONAR_HOST_URL: http://localhost:900
+  SONAR_HOST_URL: http://localhost:9001
 
 jobs:
   ci:
