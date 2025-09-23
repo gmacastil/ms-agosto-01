@@ -67,6 +67,14 @@ jobs:
 
     steps:
 
-      - name: validar
+      - name: CD Carpeta docker compose
+        run: |
+          cd docker
+          sed -i "s|TAG|${{ github.run_number }}|g" docker-compose.yaml
+          cat docker-compose.yaml
+      
+
+      - name: Run Docker Compose
         run: |
           ls -al
+          docker compose up -d
