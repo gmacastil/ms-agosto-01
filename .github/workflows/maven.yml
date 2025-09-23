@@ -77,9 +77,9 @@ jobs:
         run: |
           cd docker
           if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-            sed -i "s|^\(MESSAGE=\).*|MESSAGE=${{ vars.URL_PRD }}|g" docker-compose.yaml
+            sed -i "s|\(MESSAGE=\).*|MESSAGE=${{ vars.URL_PRD }}|g" docker-compose.yaml
           else
-            sed -i "s|^\(MESSAGE=\).*|MESSAGE=${{ vars.URL_DEV }}|g" docker-compose.yaml
+            sed -i "s|\(MESSAGE=\).*|MESSAGE=${{ vars.URL_DEV }}|g" docker-compose.yaml
           fi
           cat docker-compose.yaml
 
