@@ -4373,6 +4373,15 @@
         <mxCell id="1_Cgs5FPp47ddMkgJAtP-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.003;entryY=0.38;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1_Cgs5FPp47ddMkgJAtP-31" target="1_Cgs5FPp47ddMkgJAtP-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="o0tkscdwtvoBjCEOa3xO-1" value="apply" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="590" y="1914" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="o0tkscdwtvoBjCEOa3xO-2" value="apply" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1690" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="o0tkscdwtvoBjCEOa3xO-3" value="gtiops" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1480" width="60" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -4536,6 +4545,9 @@
         <mxCell id="Sko7fnZg_RHG1omNJ0hE-23" value="service-m2&lt;div&gt;ClusterIP&lt;/div&gt;&lt;div&gt;NodePort&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="550" y="775" width="80" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="Sko7fnZg_RHG1omNJ0hE-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Sko7fnZg_RHG1omNJ0hE-24" target="Sko7fnZg_RHG1omNJ0hE-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="Sko7fnZg_RHG1omNJ0hE-24" value="POD&lt;div&gt;micro2&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="685" y="775" width="80" height="80" as="geometry" />
         </mxCell>
@@ -4562,6 +4574,9 @@
         </mxCell>
         <mxCell id="Sko7fnZg_RHG1omNJ0hE-37" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.094;entryY=0.173;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Sko7fnZg_RHG1omNJ0hE-20" target="Sko7fnZg_RHG1omNJ0hE-32">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Sko7fnZg_RHG1omNJ0hE-57" value="ST" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="870" y="775" width="60" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
