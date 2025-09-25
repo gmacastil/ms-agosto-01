@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-agosto-02-java
+  namespace: devops
+  labels:
+    app: ms-agosto-02-java
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms-agosto-02-java
+  template:
+    metadata:
+      labels:
+        app: ms-agosto-02-java
+    spec:
+      containers:
+        - name: ms-agosto-02-java
+          image: mauron/ms-agosto-01:22
+          ports:
+            - containerPort: 8888
+          env:
+            - name: MESSAGE
+              value: "este es el micro 2"
+          envFrom:
+            - configMapRef:
+                name: generico-configmap

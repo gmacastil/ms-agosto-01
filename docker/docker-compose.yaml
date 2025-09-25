@@ -5,9 +5,7 @@ services:
     ports:
       - "9090:8888"
     environment:
-      - MESSAGE=
-      - URL=
-      - PASS=
+      - MESSAGE="hola k8s"
       - TZ=Americas/Bogota
     restart: unless-stopped
 

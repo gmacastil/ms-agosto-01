@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-agosto-02-java
+  namespace: devops
+  labels:
+    app: ms-agosto-02-java
+spec:
+  type: LoadBalancer
+  selector:
+    app: ms-agosto-02-java
+  ports:
+    - name: http
+      port: 9091
+      targetPort: 8888
